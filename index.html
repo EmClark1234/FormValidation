@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Validation Form</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="formContainer">
+        <form>
+            <div>
+                <img id="formIcon" height=40 src="images/icons8-form-64.png">
+                <h2> Fill Out the Form Below:</h2>
+            </div>
+            <div class="inputGroup">
+                <label>First and Last Name</label>
+                <input id="nameInputBox" type="text" placeholder="Enter Your Full Name" onkeyup="validateName()">
+                <span id="nameError"></span>
+            </div>
+            <div class="inputGroup">
+                <label>Phone Number</label>
+                <input id="phonNoInputBox" type="tel" placeholder="Enter Your Phone Number" onkeyup="validatePhoneNo()">
+                <span id="phoneError"></span>
+            </div>
+            <div class="inputGroup">
+                <label>Email</label>
+                <input id="emailInputBox" type="email" placeholder="Enter Your Email Address" onkeyup="validateEmail()">
+                <span id="emailError"></span>
+            </div>
+            <div class="inputGroup">
+                <label>Your Message</label>
+                <textarea rows="5" id="messageInputBox" type="text" placeholder="Type Your Message" onkeyup="validateMessage()"></textarea>
+                <span id="messageError"></span>
+            </div>
+            <button id="submitBtn" onclick=" return submitForm()">Submit</button>
+            <span id="submitError"></span>
+        </form>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
